@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nubo 🌥️</title>
+  <link rel="stylesheet" href="nubo.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="topbar">
+    <h1>🌥️ Nubo</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#registro">Registro</a>
+      <a href="#historial">Historial</a>
+      <a href="#frases">Frases</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button id="modoBtn">🌙</button>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="section inicio">
+    <h2>Bienvenido a Nubo</h2>
+    <p>Tu diario digital de emociones ✨</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/4144/4144764.png" alt="emociones" class="hero-img">
+  </section>
+
+  <!-- Sección Registro -->
+  <section id="registro" class="section registro card">
+    <h2>¿Cómo te sientes hoy?</h2>
+    <div class="emojis">
+      <button onclick="registrar('😊')">😊</button>
+      <button onclick="registrar('😐')">😐</button>
+      <button onclick="registrar('😔')">😔</button>
+      <button onclick="registrar('😡')">😡</button>
+      <button onclick="registrar('😴')">😴</button>
+    </div>
+    <p id="frase" class="frase"></p>
+  </section>
+
+  <!-- Sección Historial -->
+  <section id="historial" class="section historial card">
+    <h2>Mi historial</h2>
+    <ul id="listaHistorial"></ul>
+    <canvas id="grafico" width="400" height="200"></canvas>
+  </section>
+
+  <!-- Sección Frases motivacionales -->
+  <section id="frases" class="section card">
+    <h2>Frases motivacionales</h2>
+    <p id="fraseAleatoria">Presiona el botón para una frase 🌟</p>
+    <button class="btn" onclick="fraseRandom()">Mostrar frase</button>
+  </section>
+
+  <!-- Sección Sobre -->
+  <section id="sobre" class="section card">
+    <h2>Sobre Nubo</h2>
+    <p>Nubo es una aplicación web que te ayuda a llevar un registro simple de tus emociones, 
+       motivarte con frases positivas y reflexionar sobre tu bienestar diario 🌈.</p>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="section card">
+    <h2>Contacto</h2>
+    <form id="formContacto">
+      <input type="text" placeholder="Tu nombre" required>
+      <textarea placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p id="msgConfirm"></p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <small>© 2025 Nubo 🌥️ - Proyecto educativo</small>
+  </footer>
+
+  <script src="nubo.js"></script>
+</body>
+</html>

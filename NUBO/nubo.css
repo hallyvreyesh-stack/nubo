@@ -1,0 +1,159 @@
+/* --------- BASE --------- */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #89C4FF, #E8F3FF);
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1, h2 { margin: 0 0 1rem 0; }
+
+.section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.card {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* --------- TOPBAR --------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a5fff;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar nav a {
+  margin: 0 0.6rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.topbar nav a:hover {
+  text-decoration: underline;
+}
+
+#modoBtn {
+  border: none;
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* --------- INICIO --------- */
+.hero-img {
+  margin-top: 1rem;
+  width: 150px;
+}
+
+/* --------- REGISTRO --------- */
+.emojis button {
+  font-size: 2.5rem;
+  margin: 0.4rem;
+  cursor: pointer;
+  border: none;
+  background: #f0f4ff;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.emojis button:hover {
+  transform: scale(1.2);
+  background: #d6e4ff;
+}
+
+.frase {
+  font-style: italic;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* --------- HISTORIAL --------- */
+#listaHistorial {
+  list-style: none;
+  padding: 0;
+}
+
+#listaHistorial li {
+  padding: 0.6rem;
+  margin: 0.3rem 0;
+  background: #f0f7ff;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* --------- BOTONES --------- */
+.btn {
+  margin-top: 1rem;
+  background: #3a5fff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #5c77ff;
+}
+
+/* --------- CONTACTO --------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* --------- FOOTER --------- */
+footer {
+  text-align: center;
+  background: #3a5fff;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* --------- MODO OSCURO --------- */
+body.dark {
+  background: #1b1e34;
+  color: #eee;
+}
+
+body.dark .card {
+  background: #2a2f4d;
+  color: #eee;
+}
+
+body.dark .topbar {
+  background: #22284a;
+}
+
+body.dark footer {
+  background: #22284a;
+}
