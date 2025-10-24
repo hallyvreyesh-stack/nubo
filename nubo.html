@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nubo | Guía Emocional</title>
+  <link rel="stylesheet" href="nubo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <script defer src="nubo.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo"><h1>Nubo</h1></div>
+    <ul class="nav-links">
+      <li><a href="resumen.html">Resumen</a></li>
+      <li><a href="registro.html">Registrar Emoción</a></li>
+      <li><a href="frases.html">Frases Inspiradoras</a></li>
+      <li><a href="historial.html">Historial</a></li>
+    </ul>
+  </nav>
+
+  <div class="background"></div>
+
+  <main class="container">
+    <header class="header">
+      <h1>Nubo</h1>
+      <p>Gestión Emocional Inteligente</p>
+    </header>
+
+    <section class="calendar-section">
+      <div class="calendar-header">
+        <h2>Tu Calendario Emocional</h2>
+        <div class="month-nav">
+          <button id="prevMonth">&#10094;</button>
+          <span id="monthYear"></span>
+          <button id="nextMonth">&#10095;</button>
+        </div>
+      </div>
+      <div id="calendar" class="calendar-grid"></div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-card">
+        <i class="icon">💜</i>
+        <h3>Bienvenido/a a Nubo</h3>
+        <p>Explora y comprende tus emociones día a día con claridad y equilibrio.</p>
+      </div>
+      <div class="info-card">
+        <i class="icon">📝</i>
+        <h3>Registro Diario</h3>
+        <p>Anota cómo te sientes y observa tus patrones emocionales a lo largo del tiempo.</p>
+      </div>
+      <div class="info-card">
+        <i class="icon">📊</i>
+        <h3>Resumen Semanal</h3>
+        <p>Identifica tendencias y momentos clave que afectan tu bienestar emocional.</p>
+      </div>
+    </section>
+
+    <div class="action-buttons">
+      <button class="btn btn-primary" onclick="redirigir('registro.html')">Registrar Emoción</button>
+      <button class="btn btn-secondary" onclick="redirigir('frases.html')">Frases Inspiradoras</button>
+      <button class="btn btn-tertiary" onclick="redirigir('historial.html')">Ver Historial</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Nubo — Tu aliado en el bienestar emocional</p>
+  </footer>
+</body>
+</html>

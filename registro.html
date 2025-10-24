@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Emoción | Nubo</title>
+
+  <!-- Fuentes y estilos externos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Archivo CSS -->
+  <link rel="stylesheet" href="nubo.css">
+</head>
+
+<body>
+
+  <!-- 🌙 Barra de Navegación -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <h1>Nubo<span>🌤️</span></h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="nubo.html">Inicio</a></li>
+      <li><a href="resumen.html">Resumen</a></li>
+      <li><a href="registro.html" class="active">Registrar</a></li>
+      <li><a href="historial.html">Historial</a></li>
+      <li><a href="frases.html">Frases</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <header class="animate-slideDown">
+      <h1>Registrar Emoción</h1>
+      <p>Anota cómo te sientes hoy</p>
+    </header>
+
+    <main class="animate-fadeInUp" style="animation-delay: 0.2s;">
+      <!-- 🌄 Banner emocional -->
+      <div class="photo-placeholder" style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=80');"></div>
+
+      <!-- 💜 Tarjeta de Registro -->
+      <div class="registration-card animate-fadeInUp" style="animation-delay: 0.4s;">
+        <div class="card-header">
+          <h2 class="card-title">¿Cómo te sientes hoy?</h2>
+          <p class="card-subtitle">Selecciona una emoción y cuéntanos un poco más sobre tu día</p>
+        </div>
+
+        <form id="registro-form">
+          <div class="form-group">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input type="date" id="fecha" class="form-control" required>
+          </div>
+
+          <!-- 😃 Selector de emociones -->
+          <div class="form-group">
+            <label class="form-label">Emoción Principal</label>
+            <div class="emotion-selector">
+              <div class="emotion-option" data-emotion="Felicidad">
+                <div class="emotion-icon">😊</div>
+                <div class="emotion-name">Felicidad</div>
+              </div>
+              <div class="emotion-option" data-emotion="Tristeza">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Tristeza</div>
+              </div>
+              <div class="emotion-option" data-emotion="Enfado">
+                <div class="emotion-icon">😡</div>
+                <div class="emotion-name">Enfado</div>
+              </div>
+              <div class="emotion-option" data-emotion="Calma">
+                <div class="emotion-icon">😌</div>
+                <div class="emotion-name">Calma</div>
+              </div>
+              <div class="emotion-option" data-emotion="Ansiedad">
+                <div class="emotion-icon">😰</div>
+                <div class="emotion-name">Ansiedad</div>
+              </div>
+              <div class="emotion-option" data-emotion="Abatimiento">
+                <div class="emotion-icon">😔</div>
+                <div class="emotion-name">Abatimiento</div>
+              </div>
+              <div class="emotion-option" data-emotion="Esperanza">
+                <div class="emotion-icon">🤞</div>
+                <div class="emotion-name">Esperanza</div>
+              </div>
+              <div class="emotion-option" data-emotion="Entusiasmo">
+                <div class="emotion-icon">🤩</div>
+                <div class="emotion-name">Entusiasmo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nota" class="form-label">Notas Detalladas</label>
+            <textarea id="nota" rows="4" class="form-control" placeholder="Describe el contexto, qué te llevó a sentir esto..."></textarea>
+          </div>
+
+          <div style="text-align: right;">
+            <button type="submit" class="submit-button">
+              <i class="fas fa-save"></i> Guardar Registro
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <!-- 📩 Contenedor de notificaciones -->
+  <div class="toast-container"></div>
+
+  <!-- 📊 Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="nubo.js"></script>
+</body>
+</html>

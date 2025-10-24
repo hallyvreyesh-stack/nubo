@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen | Nubo</title>
+    <link rel="stylesheet" href="resumen.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo">Nubo</h1>
+        <nav>
+            <a href="nubo.html">Inicio</a>
+            <a href="registro.html">Registro</a>
+            <a href="resumen.html" class="active">Resumen</a>
+            <a href="historial.html">Historial</a>
+            <a href="frases.html">Frases</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+        <section class="resumen-card">
+            <div class="resumen-image"></div>
+            <div class="resumen-content">
+                <h2>Resumen de tus emociones 💜</h2>
+                <p>Este gráfico refleja la proporción de emociones registradas durante tu semana. Observa cuál ha predominado y reflexiona sobre tu bienestar.</p>
+                <div class="chart-container">
+                    <canvas id="emocionesPie"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Recuperar registros del almacenamiento local
+        const registros = JSON.parse(localStorage.getItem("emociones")) || [];
+
+        // Contar las emociones
+        const conteo = { happy: 0, neutral: 0, sad: 0 };
+        registros.forEach(r => {
+            if (r.emocion && conteo[r.emocion] !== undefined) conteo[r.emocion]++;
+        });
+
+        // Si no hay datos, mostrar un ejemplo
+        const hayDatos = registros.length > 0;
+        const data = hayDatos
+            ? [conteo.happy, conteo.neutral, conteo.sad]
+            : [6, 3, 2];
+
+        const labels = ["Feliz", "Neutral", "Triste"];
+        const colors = ["#9b6bf3", "#bfa2f8", "#d3c4f3"];
+
+        const ctx = document.getElementById("emocionesPie").getContext("2d");
+        new Chart(ctx, {
+            type: "pie",
+            data: {
+                labels,
+                datasets: [{
+                    data,
+                    backgroundColor: colors,
+                    borderColor: "#fff",
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "bottom",
+                        labels: {
+                            color: "#444",
+                            font: { size: 14, weight: "600" }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (ctx) {
+                                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                const value = ctx.parsed;
+                                const porcentaje = ((value / total) * 100).toFixed(1);
+                                return `${ctx.label}: ${porcentaje}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+s

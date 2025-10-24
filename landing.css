@@ -1,0 +1,98 @@
+/* 🎨 Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* 🌸 Contenedor principal */
+.hero {
+  text-align: center;
+  color: #333;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  color: #6a0dad;
+  letter-spacing: 1px;
+}
+
+.hero-title span {
+  color: #b388ff;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 0.4rem;
+  opacity: 0.85;
+}
+
+/* 💫 Grupo de botones */
+.cta-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* 💜 Botones modernos */
+.hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  background: linear-gradient(135deg, #a66cff, #7b68ee);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(160, 130, 255, 0.3);
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(123, 104, 238, 0.4);
+  background: linear-gradient(135deg, #c49bff, #8f7cff);
+}
+
+/* ✨ Iconos */
+.btn-icon {
+  font-size: 16px;
+}
+
+/* 🩵 Pie de página */
+.hero-footer {
+  margin-top: 3.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  opacity: 0.8;
+}
+
+/* 🌟 Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

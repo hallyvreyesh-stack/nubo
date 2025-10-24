@@ -1,0 +1,117 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: #6b4ce6;
+    font-weight: 700;
+}
+
+.navbar nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #7a5af5;
+}
+
+/* --- TARJETA DE RESUMEN --- */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.resumen-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 950px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.resumen-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+}
+
+/* --- IMAGEN DE BIENESTAR --- */
+.resumen-image {
+    flex: 1;
+    background-image: url('https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=900&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- CONTENIDO --- */
+.resumen-content {
+    flex: 1.2;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resumen-content h2 {
+    color: #5a49d6;
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.resumen-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .resumen-card {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .resumen-image {
+        height: 220px;
+    }
+
+    .resumen-content {
+        padding: 2rem;
+    }
+}
+
+
