@@ -1,0 +1,224 @@
+/* === ESTILOS PARA REGISTRO.HTML === */
+
+/* Fuente general y ajustes básicos */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #f5f7ff;
+  border-bottom: 2px solid #e0e4ff;
+  flex-wrap: wrap;
+}
+
+.nav-logo h1 {
+  font-size: 1.5rem;
+  color: #3b3b98;
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #3b3b98;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background: #f5f7ff;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #3b3b98;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #555;
+}
+
+/* === BANNER === */
+.photo-placeholder {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+/* === TARJETA DE REGISTRO === */
+.registration-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #3b3b98;
+}
+
+.card-subtitle {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* === FORMULARIO === */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  resize: none;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3b3b98;
+  box-shadow: 0 0 5px rgba(59, 59, 152, 0.2);
+}
+
+/* === EMOCIONES === */
+.emotion-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.emotion-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f7ff;
+  padding: 12px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.emotion-option:hover {
+  border-color: #3b3b98;
+  background: #eef0ff;
+}
+
+.emotion-option.active {
+  border-color: #3b3b98;
+  background: #dcdfff;
+}
+
+.emotion-icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.emotion-name {
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* === BOTÓN GUARDAR === */
+.submit-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .registration-card {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .emotion-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-logo h1 {
+    font-size: 1.2rem;
+  }
+}

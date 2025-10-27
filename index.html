@@ -3,70 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nubo | Guía Emocional</title>
-  <link rel="stylesheet" href="nubo.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <script defer src="nubo.js"></script>
+  <title>Nubo | Bienvenida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* --- Estilos generales --- */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* --- Texto Nubo --- */
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 4rem;
+      color: #6c47ff;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      animation: fadeUp 2s ease forwards, fadeOut 1s ease 3s forwards;
+    }
+
+    /* --- Animación de entrada suave --- */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(0) scale(1.02);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* --- Animación de salida --- */
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+
+    /* --- Pequeña nube flotante --- */
+    .nube {
+      position: absolute;
+      width: 120px;
+      height: 60px;
+      background: #f2f0ff;
+      border-radius: 50px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      animation: puff 2s ease 0.3s forwards;
+      z-index: -1;
+    }
+
+    .nube::before,
+    .nube::after {
+      content: "";
+      position: absolute;
+      background: #f2f0ff;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      top: -30px;
+    }
+
+    .nube::before {
+      left: -40px;
+    }
+
+    .nube::after {
+      right: -40px;
+    }
+
+    @keyframes puff {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-logo"><h1>Nubo</h1></div>
-    <ul class="nav-links">
-      <li><a href="resumen.html">Resumen</a></li>
-      <li><a href="registro.html">Registrar Emoción</a></li>
-      <li><a href="frases.html">Frases Inspiradoras</a></li>
-      <li><a href="historial.html">Historial</a></li>
-    </ul>
-  </nav>
+  <div class="nube"></div>
+  <h1>Nubo</h1>
 
-  <div class="background"></div>
-
-  <main class="container">
-    <header class="header">
-      <h1>Nubo</h1>
-      <p>Gestión Emocional Inteligente</p>
-    </header>
-
-    <section class="calendar-section">
-      <div class="calendar-header">
-        <h2>Tu Calendario Emocional</h2>
-        <div class="month-nav">
-          <button id="prevMonth">&#10094;</button>
-          <span id="monthYear"></span>
-          <button id="nextMonth">&#10095;</button>
-        </div>
-      </div>
-      <div id="calendar" class="calendar-grid"></div>
-    </section>
-
-    <section class="info-section">
-      <div class="info-card">
-        <i class="icon">💜</i>
-        <h3>Bienvenido/a a Nubo</h3>
-        <p>Explora y comprende tus emociones día a día con claridad y equilibrio.</p>
-      </div>
-      <div class="info-card">
-        <i class="icon">📝</i>
-        <h3>Registro Diario</h3>
-        <p>Anota cómo te sientes y observa tus patrones emocionales a lo largo del tiempo.</p>
-      </div>
-      <div class="info-card">
-        <i class="icon">📊</i>
-        <h3>Resumen Semanal</h3>
-        <p>Identifica tendencias y momentos clave que afectan tu bienestar emocional.</p>
-      </div>
-    </section>
-
-    <div class="action-buttons">
-      <button class="btn btn-primary" onclick="redirigir('registro.html')">Registrar Emoción</button>
-      <button class="btn btn-secondary" onclick="redirigir('frases.html')">Frases Inspiradoras</button>
-      <button class="btn btn-tertiary" onclick="redirigir('historial.html')">Ver Historial</button>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 Nubo — Tu aliado en el bienestar emocional</p>
-  </footer>
+  <script>
+    // Redirige después de 4 segundos
+    setTimeout(() => {
+      window.location.href = "nubo.html"; // Cambia si tu archivo principal tiene otro nombre
+    }, 4000);
+  </script>
 </body>
 </html>
-
